@@ -1,4 +1,5 @@
-all: ips pulpino pulpemu sw
+all: ips
+#pulpino pulpemu sw
 
 
 
@@ -10,6 +11,10 @@ ips: clk mem fp_fma
 clk: ips/xilinx_clock_manager/ip/xilinx_clock_manager.dcp
 
 ips/xilinx_clock_manager/ip/xilinx_clock_manager.dcp:
+	@echo " "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+	@echo "[MAKE TARGET] ips/xilinx_clock_manager/ip/xilinx_clock_manager.dcp "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 	make -C ips/xilinx_clock_manager/ clean all
 
 
@@ -17,6 +22,10 @@ ips/xilinx_clock_manager/ip/xilinx_clock_manager.dcp:
 mem: ips/xilinx_mem_8192x32/ip/xilinx_mem_8192x32.dcp
 
 ips/xilinx_mem_8192x32/ip/xilinx_mem_8192x32.dcp:
+	@echo " "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+	@echo "[MAKE TARGET] ips/xilinx_mem_8192x32/ip/xilinx_mem_8192x32.dcp "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 	make -C ips/xilinx_mem_8192x32/ clean all
 
 
@@ -30,6 +39,10 @@ ips/xilinx_mem_32768x32_dp/ip/xilinx_mem_32768x32_dp.dcp:
 fp_fma: ips/xilinx_fp_fma/ip/xilinx_fp_fma.dcp
 
 ips/xilinx_fp_fma/ip/xilinx_fp_fma.dcp:
+	@echo " "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+	@echo "[MAKE TARGET] ips/xilinx_fp_fma/ip/xilinx_fp_fma.dcp "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 	make -C ips/xilinx_fp_fma/ clean all
 
 .PHONY: pulpino
