@@ -1,5 +1,8 @@
-all: ips
-#pulpino pulpemu sw
+all: pulpino
+#ips
+#pulpino
+#pulpemu
+#sw
 
 
 
@@ -49,6 +52,10 @@ ips/xilinx_fp_fma/ip/xilinx_fp_fma.dcp:
 pulpino: pulpino/pulpino.edf
 
 pulpino/pulpino.edf:
+	@echo " "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+	@echo "[MAKE TARGET] pulpino/pulpino.edf "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 	make -C pulpino clean all
 
 
