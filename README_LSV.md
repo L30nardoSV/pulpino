@@ -1,3 +1,8 @@
+```
+source /opt/cad/xilinx/vivado/Vivado/2019.1/settings64.sh
+```
+
+
 
 ```
 ➜  pulpino git:(master) ls
