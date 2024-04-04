@@ -2,43 +2,43 @@
 
 **Important**: _we start using the original repository to pull all required git submodules. However, thereafter, we switch to our custom repository (containing adaptations) for building the FPGA designs_.
 
-```
+```sh
 git clone https://github.com/pulp-platform/pulpino.git
 ```
 
-```
+```sh
 cd pulpino/
 ```
 
 It is important to use a **Python 2**  environment (otherwise several fixes will be required):
 
-```
+```sh
 virtualenv --python=python2 venv
 ```
 
-```
+```sh
 source venv/bin/activate
 ```
 
 Next instructions are executed within the Python virtual environment:
 
-```
+```sh
 (venv) [lvs@aredhel pulpino]$ ./update-ips.py
 ```
 
 You will get `ImportError: No module named yaml`, so import it:
 
-```
+```sh
 (venv) [lvs@aredhel pulpino]$ pip install pyyaml
 ```
 
-```
+```sh
 (venv) [lvs@aredhel pulpino]$ ./update-ips.py
 ```
 
 This time, the output will be better, but giving this summary:
 
-```
+```sh
 [...]
 Cloning ip 'adv_dbg_if'...
 https://github.com/pulp-platform
@@ -62,13 +62,13 @@ ERRORS during IP update!
 
 The following is required in a further step (building pulpino within `fpga/pulpino`) 
 
-```
+```sh
 (venv) [lvs@aredhel pulpino]$ ./generate-scripts.py
 ```
 
 As far as I can tell, this script generates the following (and perhaps other) files:
 
-```
+```sh
 (venv) [lvs@aredhel pulpino]$ ll fpga/pulpino/tcl/
 total 48
 -rw-r--r--. 1 lvs wimi  1408  4. Apr 14:39 ips_add_files.tcl
@@ -78,11 +78,11 @@ total 48
 -rw-r--r--. 1 lvs wimi   969  4. Apr 14:37 src_files.tcl
 ```
 
-```
+```sh
 (venv) [lvs@aredhel pulpino]$ cd fpga/
 ```
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ git remote -v
 origin	https://github.com/pulp-platform/pulpino.git (fetch)
 origin	https://github.com/pulp-platform/pulpino.git (push)
@@ -90,11 +90,11 @@ origin	https://github.com/pulp-platform/pulpino.git (push)
 
 The **leo** repository in GitHub contains scripts adaptations needed to get this working:
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ git remote add leo git@github.com:L30nardoSV/pulpino.git
 ```
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ git remote -v
 leo	git@github.com:L30nardoSV/pulpino.git (fetch)
 leo	git@github.com:L30nardoSV/pulpino.git (push)
@@ -102,19 +102,19 @@ origin	https://github.com/pulp-platform/pulpino.git (fetch)
 origin	https://github.com/pulp-platform/pulpino.git (push)
 ```
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ git fetch leo
 ```
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ git checkout lsv-zed
 ```
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ source /opt/cad/xilinx/vivado/Vivado/2019.1/settings64.sh
 ```
 
-```
+```sh
 (venv) [lvs@aredhel fpga]$ make all
 ```
 
