@@ -88,10 +88,11 @@ origin	https://github.com/pulp-platform/pulpino.git (fetch)
 origin	https://github.com/pulp-platform/pulpino.git (push)
 ```
 
+The **leo** repository in GitHub contains scripts adaptations needed to get this working:
+
 ```
 (venv) [lvs@aredhel fpga]$ git remote add leo git@github.com:L30nardoSV/pulpino.git
 ```
-
 
 ```
 (venv) [lvs@aredhel fpga]$ git remote -v
@@ -101,14 +102,12 @@ origin	https://github.com/pulp-platform/pulpino.git (fetch)
 origin	https://github.com/pulp-platform/pulpino.git (push)
 ```
 
-The **leo** repository in GitHub contains scripts adaptations needed to get this working:
-
 ```
 (venv) [lvs@aredhel fpga]$ git fetch leo
 ```
 
 ```
-(venv) [lvs@aredhel fpga]$ git checkout  lsv-zed
+(venv) [lvs@aredhel fpga]$ git checkout lsv-zed
 ```
 
 ```
