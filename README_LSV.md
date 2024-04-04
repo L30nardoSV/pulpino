@@ -2,7 +2,13 @@
 source /opt/cad/xilinx/vivado/Vivado/2019.1/settings64.sh
 ```
 
+```
+git clone https://github.com/pulp-platform/pulpino.git
+```
 
+```
+cd pulpino/
+```
 
 ```
 ➜  pulpino git:(master) ls
@@ -10,7 +16,7 @@ ci  create-archive.py  doc  fpga  generate-scripts.py  ips  ips_list.yml  ipstoo
 ```
 
 ```
-➜  pulpino git:(master) virtualenv --python=python3 venv
+➜  pulpino git:(master) virtualenv --python=python2 venv
 ```
 
 ```
