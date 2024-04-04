@@ -111,6 +111,10 @@ origin	https://github.com/pulp-platform/pulpino.git (push)
 (venv) [lvs@aredhel fpga]$ source /opt/cad/xilinx/vivado/Vivado/2019.1/settings64.sh
 ```
 
+```
+(venv) [lvs@aredhel fpga]$ make all
+```
+
 
 
 
