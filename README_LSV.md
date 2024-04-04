@@ -1,4 +1,4 @@
-
+# Instructions
 
 ```
 git clone https://github.com/pulp-platform/pulpino.git
@@ -54,32 +54,35 @@ SUMMARY
 ERRORS during IP update!
 ```
 
-
-
-
 ```
-origin	git@github.com:L30nardoSV/pulpino.git (fetch)
-origin	git@github.com:L30nardoSV/pulpino.git (push)
+(venv) [lvs@aredhel pulpino]$ cd fpga/
 ```
 
 ```
-(venv) ➜  pulpino git:(lsv-zed) git remote rename origin leo
-Renaming remote references: 100% (4/4), done.
+(venv) [lvs@aredhel fpga]$ git remote -v
+origin	https://github.com/pulp-platform/pulpino.git (fetch)
+origin	https://github.com/pulp-platform/pulpino.git (push)
 ```
 
 ```
-(venv) ➜  pulpino git:(lsv-zed) git remote -v
-leo	git@github.com:L30nardoSV/pulpino.git (fetch)
-leo	git@github.com:L30nardoSV/pulpino.git (push)
+(venv) [lvs@aredhel fpga]$ git remote add leo git@github.com:L30nardoSV/pulpino.git
 ```
 
+
 ```
-(venv) ➜  pulpino git:(lsv-zed) git remote add origin https://github.com/pulp-platform/pulpino.git
-(venv) ➜  pulpino git:(lsv-zed) git remote -v
+(venv) [lvs@aredhel fpga]$ git remote -v
 leo	git@github.com:L30nardoSV/pulpino.git (fetch)
 leo	git@github.com:L30nardoSV/pulpino.git (push)
 origin	https://github.com/pulp-platform/pulpino.git (fetch)
 origin	https://github.com/pulp-platform/pulpino.git (push)
+```
+
+```
+(venv) [lvs@aredhel fpga]$ git fetch leo
+```
+
+```
+(venv) [lvs@aredhel fpga]$ git checkout  lsv-zed
 ```
 
 
