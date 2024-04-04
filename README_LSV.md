@@ -1,5 +1,7 @@
 # Instructions
 
+**Important**: _we start using the original repository to pull all required git submodules. However, thereafter, we switch to our custom repository (containing adaptations) for building the FPGA designs_.
+
 ```
 git clone https://github.com/pulp-platform/pulpino.git
 ```
