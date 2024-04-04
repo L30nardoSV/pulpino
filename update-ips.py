@@ -23,9 +23,7 @@ def execute_out(cmd, silent=False):
 def find_server():
     stdout = execute_out("git remote -v")
 
-    # LSV fix
-    #stdout = stdout.split('\n')
-    stdout = stdout.decode('utf8').split('\n')
+    stdout = stdout.split('\n')
 
     for line in stdout:
         if "origin" in line:
@@ -53,9 +51,7 @@ def find_server():
 
             return [server, group, remote]
 
-    # LSV fix
-    #print tcolors.ERROR + "ERROR: could not find remote server." + tcolors.ENDC
-    print (tcolors.ERROR + "ERROR: could not find remote server." + tcolors.ENDC)
+    print tcolors.ERROR + "ERROR: could not find remote server." + tcolors.ENDC
     sys.exit(1)
 
 if len(sys.argv) > 1:
@@ -66,15 +62,10 @@ if len(sys.argv) > 1:
     else:
         remote = "%s:%s" % (server, group)
 
-# LSV fix
-#if not vars().has_key('server'):
-if not vars().__contains__('server'):
+if not vars().has_key('server'):
     [server, group, remote] = find_server()
 
-# LSV fix
-#print "Using remote git server %s, remote is %s" % (server, remote)
-print ("Using remote git server %s, remote is %s" % (server, remote))
-
+print "Using remote git server %s, remote is %s" % (server, remote)
 
 # download IPApproX tools in ./ipstools and import them
 if os.path.exists("ipstools") and os.path.isdir("ipstools"):
