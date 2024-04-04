@@ -85,37 +85,13 @@ origin	https://github.com/pulp-platform/pulpino.git (push)
 (venv) [lvs@aredhel fpga]$ git checkout  lsv-zed
 ```
 
-
 ```
 source /opt/cad/xilinx/vivado/Vivado/2019.1/settings64.sh
 ```
 
 
-Manually fix a printf in generated Python script:
-
-```
-(venv) ➜  pulpino git:(lsv-zed) ./update-ips.py 
-Using remote git server https://github.com, remote is https://github.com/pulp-platform
-Cloning into 'ipstools'...
-remote: Enumerating objects: 974, done.
-remote: Counting objects: 100% (29/29), done.
-remote: Compressing objects: 100% (15/15), done.
-remote: Total 974 (delta 14), reused 21 (delta 13), pack-reused 945
-Receiving objects: 100% (974/974), 192.96 KiB | 5.36 MiB/s, done.
-Resolving deltas: 100% (675/675), done.
-Traceback (most recent call last):
-  File "/home/wimi/lvs/Zedboard/UTEC/pulpino/./update-ips.py", line 95, in <module>
-    import ipstools
-  File "/home/wimi/lvs/Zedboard/UTEC/pulpino/ipstools/__init__.py", line 13, in <module>
-    from .SubIPConfig import *
-  File "/home/wimi/lvs/Zedboard/UTEC/pulpino/ipstools/SubIPConfig.py", line 116
-    print "Skipping %s.%s as it is not supported by the TCSH-based build flow." % (self.ip_name, self.sub_ip_name)
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-```
 
 
-```
-pip install pyyaml
-```
+
 
 
