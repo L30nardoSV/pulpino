@@ -63,11 +63,19 @@ pulpino/pulpino.edf:
 pulpemu: pulpemu/pulpemu_top.bit
 
 pulpemu/pulpemu_top.bit:
+	@echo " "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+	@echo "[MAKE TARGET] pulpemu/pulpemu_top.bit "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 	make -C pulpemu clean all
 
 
 .PHONY: sw
 sw:
+	@echo " "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+	@echo "[MAKE TARGET] sw "
+	@echo "- - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
 	make -C sw all
 
 
