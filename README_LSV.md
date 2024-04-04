@@ -16,6 +16,8 @@ virtualenv --python=python2 venv
 source venv/bin/activate
 ```
 
+Next instructions are executed within the Python virtual environment:
+
 ```
 (venv) [lvs@aredhel pulpino]$ ./update-ips.py
 ```
@@ -52,6 +54,24 @@ SUMMARY
     adv_dbg_if - Could not checkout commit pulpinov1
 ()
 ERRORS during IP update!
+```
+
+The following is required in a further step (building pulpino within `fpga/pulpino`) 
+
+```
+(venv) [lvs@aredhel pulpino]$ ./generate-scripts.py
+```
+
+As far as I can tell, this script generates the following (and perhaps other) files:
+
+```
+(venv) [lvs@aredhel pulpino]$ ll fpga/pulpino/tcl/
+total 48
+-rw-r--r--. 1 lvs wimi  1408  4. Apr 14:39 ips_add_files.tcl
+-rw-r--r--. 1 lvs wimi   427  4. Apr 14:39 ips_inc_dirs.tcl
+-rw-r--r--. 1 lvs wimi 10283  4. Apr 14:39 ips_src_files.tcl
+-rw-r--r--. 1 lvs wimi  4250  4. Apr 14:37 run.tcl
+-rw-r--r--. 1 lvs wimi   969  4. Apr 14:37 src_files.tcl
 ```
 
 ```
