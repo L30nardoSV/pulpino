@@ -8,6 +8,8 @@ git clone https://github.com/pulp-platform/pulpino.git
 cd pulpino/
 ```
 
+It is important to use a **Python 2**  environment (otherwise several fixes will be required):
+
 ```
 virtualenv --python=python2 venv
 ```
