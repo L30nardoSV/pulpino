@@ -118,7 +118,8 @@ origin	https://github.com/pulp-platform/pulpino.git (push)
 (venv) [lvs@aredhel fpga]$ make all
 ```
 
-
+Currently, it fails when building **pulpemu**. 
+A problem when building **pulpemu** has been reported here: https://github.com/pulp-platform/pulpino/issues/270
 
 
 
