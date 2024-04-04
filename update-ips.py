@@ -24,7 +24,6 @@ def find_server():
     stdout = execute_out("git remote -v")
 
     stdout = stdout.split('\n')
-
     for line in stdout:
         if "origin" in line:
             tmp = line.split(' ')
@@ -66,6 +65,7 @@ if not vars().has_key('server'):
     [server, group, remote] = find_server()
 
 print "Using remote git server %s, remote is %s" % (server, remote)
+
 
 # download IPApproX tools in ./ipstools and import them
 if os.path.exists("ipstools") and os.path.isdir("ipstools"):
