@@ -16,6 +16,17 @@ virtualenv --python=python2 venv
 source venv/bin/activate
 ```
 
+```
+(venv) [lvs@aredhel pulpino]$ ./update-ips.py
+```
+
+You will get `ImportError: No module named yaml`, so import it:
+
+```
+(venv) [lvs@aredhel pulpino]$ pip install pyyaml
+```
+
+
 
 ```
 origin	git@github.com:L30nardoSV/pulpino.git (fetch)
