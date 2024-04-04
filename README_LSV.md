@@ -99,6 +99,8 @@ origin	https://github.com/pulp-platform/pulpino.git (fetch)
 origin	https://github.com/pulp-platform/pulpino.git (push)
 ```
 
+The **leo** repository in GitHub contains scripts adaptations needed to get this working:
+
 ```
 (venv) [lvs@aredhel fpga]$ git fetch leo
 ```
